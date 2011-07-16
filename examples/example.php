@@ -19,8 +19,8 @@ require '../src/facebook.php';
 
 // Create our Application instance (replace this with your appId and secret).
 $facebook = new Facebook(array(
-  'appId'  => '117743971608120',
-  'secret' => '943716006e74d9b9283d4d5d8ab93204',
+  'appId'  => '140023512741619',
+  'secret' => '4175af5986259d8f35198cc192c3d455',
 ));
 
 // Get User ID
@@ -35,7 +35,7 @@ $user = $facebook->getUser();
 if ($user) {
   try {
     // Proceed knowing you have a logged in user who's authenticated.
-    $user_profile = $facebook->api('/me');
+    $user_profile = $facebook->api('https://graph.facebook.com/farshid.samadzadeh');
   } catch (FacebookApiException $e) {
     error_log($e);
     $user = null;
